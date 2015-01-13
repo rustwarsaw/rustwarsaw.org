@@ -1,0 +1,5 @@
+[package]
+
+name = "rustwarsaw"
+version = "0.0.1"
+authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
