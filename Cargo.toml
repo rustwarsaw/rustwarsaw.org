@@ -5,4 +5,4 @@ version = "0.0.1"
 authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 
 [dependencies]
-iron = "~0.0.12"
+iron = "~0.0.13"
