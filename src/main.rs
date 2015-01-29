@@ -1,3 +1,5 @@
+#![feature(collections, io, os)]
+
 extern crate docopt;
 extern crate iron;
 extern crate "rustc-serialize" as rustc_serialize;
