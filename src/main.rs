@@ -2,7 +2,7 @@ extern crate docopt;
 extern crate iron;
 extern crate "rustc-serialize" as rustc_serialize;
 
-use std::io::net::ip::Ipv4Addr;
+use std::old_io::net::ip::Ipv4Addr;
 
 use docopt::Docopt;
 
