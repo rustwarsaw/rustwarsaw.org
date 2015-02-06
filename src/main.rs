@@ -1,4 +1,4 @@
-#![feature(collections, io, os)]
+#![feature(io, os)]
 
 extern crate docopt;
 extern crate iron;
