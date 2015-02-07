@@ -1,4 +1,4 @@
-#![feature(io, os)]
+#![feature(io)]
 
 extern crate docopt;
 extern crate iron;
@@ -27,7 +27,7 @@ struct Args {
 
 fn main() {
     let args: Args = Docopt::new(USAGE)
-        .and_then(|d| d.help(true).argv(std::os::args().into_iter()).decode())
+        .and_then(|d| d.help(true).decode())
         .unwrap_or_else(|e| e.exit());
     println!("Starting server on port {}", args.flag_port);
     Iron::new(|&: _: &mut Request| {
