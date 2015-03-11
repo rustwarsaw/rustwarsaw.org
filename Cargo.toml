@@ -5,6 +5,6 @@ version = "0.0.1"
 authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 
 [dependencies]
-rustc-serialize = "~0.3.0"
-docopt = "~0.6.39"
-iron = "~0.1.9"
+rustc-serialize = "~0.3.1"
+docopt = "~0.6.45"
+iron = "~0.1.11"
