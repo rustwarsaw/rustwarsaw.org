@@ -1,10 +1,6 @@
-#![feature(io)]
-
 extern crate docopt;
 extern crate iron;
 extern crate "rustc-serialize" as rustc_serialize;
-
-use std::old_io::net::ip::Ipv4Addr;
 
 use docopt::Docopt;
 
@@ -30,8 +26,8 @@ fn main() {
         .and_then(|d| d.help(true).decode())
         .unwrap_or_else(|e| e.exit());
     println!("Starting server on port {}", args.flag_port);
-    Iron::new(|&: _: &mut Request| {
+    Iron::new(|_: &mut Request| {
         let content_type: Mime = "text/html".parse().unwrap();
         Ok(Response::with((status::Ok, "Hello Rust Warsaw!")).set(content_type))
-    }).listen((Ipv4Addr(127, 0, 0, 1), args.flag_port)).unwrap();
+    }).http(("127.0.0.1", args.flag_port)).unwrap();
 }
