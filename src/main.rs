@@ -1,5 +1,6 @@
 extern crate docopt;
 extern crate iron;
+extern crate mount;
 extern crate rustc_serialize;
 
 use docopt::Docopt;
@@ -7,6 +8,7 @@ use docopt::Docopt;
 use iron::mime::Mime;
 use iron::prelude::*;
 use iron::status;
+use mount::Mount;
 
 static USAGE: &'static str = "
 Usage: rustwarsaw [options]
@@ -31,5 +33,7 @@ fn main() {
         .and_then(|d| d.help(true).decode())
         .unwrap_or_else(|e| e.exit());
     println!("Starting server on port {}", args.flag_port);
-    Iron::new(hello).http(("127.0.0.1", args.flag_port)).unwrap();
+    let mut mount = Mount::new();
+    mount.mount("/", hello);
+    Iron::new(mount).http(("127.0.0.1", args.flag_port)).unwrap();
 }

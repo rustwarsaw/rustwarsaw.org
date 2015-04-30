@@ -4,6 +4,7 @@ version = "0.0.1"
 dependencies = [
  "docopt 0.6.63 (registry+https://github.com/rust-lang/crates.io-index)",
  "iron 0.1.16 (registry+https://github.com/rust-lang/crates.io-index)",
+ "mount 0.0.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -140,6 +141,16 @@ version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "mount"
+version = "0.0.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "iron 0.1.16 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sequence_trie 0.0.12 (registry+https://github.com/rust-lang/crates.io-index)",
+ "url 0.2.31 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "num_cpus"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -206,6 +217,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "rustc-serialize"
 version = "0.3.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "sequence_trie"
+version = "0.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]

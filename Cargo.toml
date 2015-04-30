@@ -8,3 +8,4 @@ authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 rustc-serialize = "~0.3.14"
 docopt = "~0.6.63"
 iron = "~0.1.16"
+mount = "~0.0.7"
