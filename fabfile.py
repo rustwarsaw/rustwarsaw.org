@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from fabric.api import *
+from fabric.contrib.project import rsync_project
 
 
 PROJECT_PATH = "rustwarsaw.org"
@@ -28,6 +29,7 @@ def build_release():
 def update_binaries():
     with cd(PROJECT_PATH):
         put("target/release/rustwarsaw", "rustwarsaw")
+    rsync_project("{}/www/".format(PROJECT_PATH), "www/", delete=True)
 
 
 @task
