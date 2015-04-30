@@ -21,13 +21,15 @@ struct Args {
     flag_port: u16,
 }
 
+fn hello(_: &mut Request) -> IronResult<Response> {
+    let content_type: Mime = "text/html".parse().unwrap();
+    Ok(Response::with((status::Ok, "Hello Rust Warsaw!")).set(content_type))
+}
+
 fn main() {
     let args: Args = Docopt::new(USAGE)
         .and_then(|d| d.help(true).decode())
         .unwrap_or_else(|e| e.exit());
     println!("Starting server on port {}", args.flag_port);
-    Iron::new(|_: &mut Request| {
-        let content_type: Mime = "text/html".parse().unwrap();
-        Ok(Response::with((status::Ok, "Hello Rust Warsaw!")).set(content_type))
-    }).http(("127.0.0.1", args.flag_port)).unwrap();
+    Iron::new(hello).http(("127.0.0.1", args.flag_port)).unwrap();
 }
