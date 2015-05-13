@@ -69,7 +69,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "hyper"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cookie 0.1.20 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -93,13 +93,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "conduit-mime-types 0.7.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "error 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "hyper 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hyper 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "modifier 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "num_cpus 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "plugin 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "typemap 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "typemap 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "url 0.2.34 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -197,7 +197,7 @@ name = "plugin"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "typemap 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "typemap 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -292,7 +292,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "typemap"
-version = "0.3.1"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "unsafe-any 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
