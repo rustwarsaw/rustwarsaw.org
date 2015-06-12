@@ -11,6 +11,7 @@ PROJECT_PATH = "rustwarsaw.org"
 env.roledefs = {
     'web': ["rustwarsaw@rustwarsaw.org"],
 }
+env.use_ssh_config = True
 
 
 @task
