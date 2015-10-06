@@ -6,7 +6,7 @@ authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 
 [dependencies]
 rustc-serialize = "~0.3.16"
-docopt = "~0.6.70"
+docopt = "~0.6.73"
 iron = "~0.2.2"
 mount = "~0.0.9"
 staticfile = "~0.0.6"
